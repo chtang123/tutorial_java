@@ -265,11 +265,15 @@ public class VirtualChess {
 
         String command;
 
-        while (!in.equals("exit")) {
+        while (in!=null){
             printBoard(chessboard);
             System.out.println("Please enter a move.");
             command = in.nextLine();
+            if(command.equals("exit")) {
+                break;
+            }
             move(chessboard, command);
         }
     }
-}
+        
+    }
